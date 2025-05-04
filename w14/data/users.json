@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "role": "Software Engineer",
+        "department": "Engineering",
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+        "status": "Active"
+    },
+    {
+        "id": 2,
+        "name": "Jane Smith",
+        "email": "jane.smith@example.com",
+        "role": "Product Manager",
+        "department": "Product",
+        "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+        "status": "Active"
+    },
+    {
+        "id": 3,
+        "name": "Mike Johnson",
+        "email": "mike.johnson@example.com",
+        "role": "UX Designer",
+        "department": "Design",
+        "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+        "status": "On Leave"
+    },
+    {
+        "id": 4,
+        "name": "Sarah Williams",
+        "email": "sarah.williams@example.com",
+        "role": "Marketing Specialist",
+        "department": "Marketing",
+        "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
+        "status": "Active"
+    },
+    {
+        "id": 5,
+        "name": "David Brown",
+        "email": "david.brown@example.com",
+        "role": "HR Manager",
+        "department": "Human Resources",
+        "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+        "status": "Active"
+    }
+] 

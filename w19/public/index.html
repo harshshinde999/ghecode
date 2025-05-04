@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Marks Management</h1>
+        
+        <!-- Add Student Form -->
+        <div class="form-container">
+            <h2>Add New Student</h2>
+            <form id="addStudentForm">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="number" id="rollNo" placeholder="Roll Number" required>
+                <input type="number" id="WAD_Marks" placeholder="WAD Marks" min="0" max="100" required>
+                <input type="number" id="CC_Marks" placeholder="CC Marks" min="0" max="100" required>
+                <input type="number" id="DSBDA_Marks" placeholder="DSBDA Marks" min="0" max="100" required>
+                <input type="number" id="CNS_Marks" placeholder="CNS Marks" min="0" max="100" required>
+                <input type="number" id="AI_marks" placeholder="AI Marks" min="0" max="100" required>
+                <button type="submit">Add Student</button>
+            </form>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="actions-container">
+            <button onclick="showAllStudents()">Show All Students</button>
+            <button onclick="showDSBDAStudents()">DSBDA > 20</button>
+            <button onclick="showExcellentStudents()">All Subjects > 25</button>
+            <button onclick="showPoorStudents()">WAD & CC < 40</button>
+            <button onclick="showTotalCount()">Show Total Count</button>
+        </div>
+
+        <!-- Students Table -->
+        <div class="table-container">
+            <h2>Students List</h2>
+            <table id="studentsTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Roll No</th>
+                        <th>WAD</th>
+                        <th>CC</th>
+                        <th>DSBDA</th>
+                        <th>CNS</th>
+                        <th>AI</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="studentsList"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

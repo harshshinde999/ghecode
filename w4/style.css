@@ -1,0 +1,103 @@
+/* Base reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9fbfc;
+    color: #333;
+    line-height: 1.6;
+    padding: 0 20px;
+  }
+  
+  /* Header */
+  header {
+    background: #0e76a8;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 4px solid #095c8c;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  header p {
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
+  
+  /* Section base */
+  section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  }
+  
+  h2 {
+    color: #0e76a8;
+    margin-bottom: 15px;
+    border-left: 5px solid #0e76a8;
+    padding-left: 10px;
+    font-size: 1.6rem;
+  }
+  
+  blockquote {
+    background-color: #e0f7ff;
+    padding: 15px;
+    border-left: 4px solid #0e76a8;
+    margin-top: 15px;
+    font-style: italic;
+    color: #333;
+  }
+  
+  /* List styles */
+  ul, ol {
+    margin-left: 25px;
+    font-size: 1.1rem;
+    padding-top: 10px;
+  }
+  
+  ul li, ol li {
+    margin-bottom: 10px;
+  }
+  
+  /* Course table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+  
+  table thead {
+    background-color: #0e76a8;
+    color: white;
+  }
+  
+  table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  table tr:hover {
+    background-color: #f1faff;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #095c8c;
+    color: white;
+    margin-top: 40px;
+  }
+  

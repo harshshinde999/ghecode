@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Database</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Music Database</h1>
+        
+        <!-- Add Song Form -->
+        <div class="form-container">
+            <h2>Add New Song</h2>
+            <form id="addSongForm">
+                <input type="text" id="songName" placeholder="Song Name" required>
+                <input type="text" id="film" placeholder="Film Name" required>
+                <input type="text" id="musicDirector" placeholder="Music Director" required>
+                <input type="text" id="singer" placeholder="Singer" required>
+                <button type="submit">Add Song</button>
+            </form>
+        </div>
+
+        <!-- Search Forms -->
+        <div class="search-container">
+            <div class="search-form">
+                <h3>Search by Music Director</h3>
+                <input type="text" id="directorSearch" placeholder="Music Director">
+                <button onclick="searchByDirector()">Search</button>
+            </div>
+
+            <div class="search-form">
+                <h3>Search by Music Director and Singer</h3>
+                <input type="text" id="directorSingerSearch" placeholder="Music Director">
+                <input type="text" id="singerSearch" placeholder="Singer">
+                <button onclick="searchByDirectorAndSinger()">Search</button>
+            </div>
+
+            <div class="search-form">
+                <h3>Search by Singer and Film</h3>
+                <input type="text" id="singerFilmSearch" placeholder="Singer">
+                <input type="text" id="filmSearch" placeholder="Film">
+                <button onclick="searchBySingerAndFilm()">Search</button>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="actions-container">
+            <button onclick="showAllSongs()">Show All Songs</button>
+            <button onclick="showTotalCount()">Show Total Count</button>
+            <button onclick="initializeSongs()">Initialize Sample Songs</button>
+        </div>
+
+        <!-- Songs Table -->
+        <div class="table-container">
+            <h2>Songs List</h2>
+            <table id="songsTable">
+                <thead>
+                    <tr>
+                        <th>Song Name</th>
+                        <th>Film</th>
+                        <th>Music Director</th>
+                        <th>Singer</th>
+                        <th>Actor</th>
+                        <th>Actress</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="songsList"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
