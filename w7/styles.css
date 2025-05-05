@@ -1,0 +1,164 @@
+body {
+    background: linear-gradient(to bottom, #e9ebee 0%, #fff 100%);
+    min-height: 100vh;
+}
+
+.bg-primary {
+    background-color: #3b5998 !important;
+}
+
+h1 {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 3rem;
+    letter-spacing: -2px;
+    margin-bottom: 0;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px #23345d33;
+}
+
+/* Header login form */
+form.d-flex.align-items-center {
+    gap: 1rem;
+}
+
+.form-label {
+    color: #fff;
+    font-size: 0.95rem;
+    margin-bottom: 0.1rem;
+}
+
+.form-control-sm {
+    min-width: 140px;
+    font-size: 0.95rem;
+    padding: 0.2rem 0.5rem;
+}
+
+.btn-light {
+    background: #f5f6f7;
+    color: #3b5998;
+    border: none;
+    font-weight: 600;
+    padding: 0.25rem 1.2rem;
+}
+
+.btn-light:hover {
+    background: #e9ebee;
+    color: #3b5998;
+}
+
+/* Main Content */
+.container {
+    margin-top: 40px;
+}
+
+.col-lg-6 h2 {
+    color: #365899;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.col-lg-6 p.fs-5 {
+    font-size: 1.1rem !important;
+    color: #222;
+}
+
+.col-lg-6 img {
+    border: 1px solid #ccd0d5;
+    background: #fff;
+    padding: 10px;
+    max-width: 95%;
+    margin-bottom: 0.5rem;
+}
+
+.text-muted.small {
+    font-size: 0.95rem;
+    color: #888 !important;
+    margin-left: 0.2rem;
+}
+
+/* Registration Card */
+.card {
+    border-radius: 8px;
+    border: 1px solid #dddfe2;
+    box-shadow: 0 2px 8px #0001;
+}
+
+.card h3 {
+    color: #333;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.card p.mb-4 {
+    color: #606770;
+    font-size: 1.1rem;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ccd0d5;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+input[type="date"]::-webkit-input-placeholder {
+    color: #bbb;
+}
+
+input[type="date"]::-moz-placeholder {
+    color: #bbb;
+}
+
+input[type="date"]:-ms-input-placeholder {
+    color: #bbb;
+}
+
+input[type="date"]::placeholder {
+    color: #bbb;
+}
+
+.btn-success {
+    background: #42b72a;
+    border: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px #0001;
+}
+
+.btn-success:hover {
+    background: #36a420;
+}
+
+.text-primary {
+    color: #1877f2 !important;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.text-primary:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 991.98px) {
+    .container {
+        margin-top: 20px;
+    }
+    .col-lg-6, .col-lg-5 {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .container {
+        margin-top: 10px;
+    }
+    .card {
+        padding: 1.2rem !important;
+    }
+    h1 {
+        font-size: 2.2rem;
+    }
+} 

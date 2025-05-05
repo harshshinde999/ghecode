@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .data-list {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+        }
+
+        .user-card {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 1.5rem;
+            background-color: #f8f9fa;
+        }
+
+        .user-card h3 {
+            color: #333;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 0.5rem;
+        }
+
+        .user-info {
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: baseline;
+        }
+
+        .user-info strong {
+            color: #555;
+            min-width: 120px;
+            display: inline-block;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .logout-btn {
+            background-color: #dc3545;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .logout-btn:hover {
+            background-color: #c82333;
+        }
+
+        .welcome-message {
+            color: #4CAF50;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="data-list">
+            <div class="header">
+                <h2>My Profile</h2>
+                <a href="#" class="logout-btn" id="logoutBtn">Logout</a>
+            </div>
+            <div id="userProfile"></div>
+        </div>
+    </div>
+    <script>
+        // Check if user is logged in
+        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        if (!currentUser) {
+            window.location.href = 'index.html';
+        }
+
+        const userProfile = document.getElementById('userProfile');
+        
+        // Display current user's data
+        const userCard = document.createElement('div');
+        userCard.className = 'user-card';
+        userCard.innerHTML = `
+            <div class="welcome-message">Welcome, ${currentUser.name}!</div>
+            <h3>Personal Information</h3>
+            <div class="user-info">
+                <strong>Full Name:</strong> ${currentUser.name}
+            </div>
+            <div class="user-info">
+                <strong>Email:</strong> ${currentUser.email}
+            </div>
+            <div class="user-info">
+                <strong>Mobile:</strong> ${currentUser.mobile}
+            </div>
+            <div class="user-info">
+                <strong>Date of Birth:</strong> ${new Date(currentUser.dob).toLocaleDateString()}
+            </div>
+            <div class="user-info">
+                <strong>City:</strong> ${currentUser.city}
+            </div>
+            <div class="user-info">
+                <strong>Address:</strong> ${currentUser.address}
+            </div>
+        `;
+        userProfile.appendChild(userCard);
+
+        // Logout functionality
+        document.getElementById('logoutBtn').addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem('currentUser');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html> 

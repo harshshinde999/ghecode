@@ -3,54 +3,340 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>John Doe - Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Swikar Jadhav</h1>
-    <p>AI/ML Developer | Cybersecurity Enthusiast</p>
-  </header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">JD</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  <section class="about">
-    <h2>About Me</h2>
-    <p>I’m an AI/ML engineer passionate about building intelligent systems and secure digital solutions. I love working on real-world challenges through automation and ethical hacking.</p>
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="container">
+      <div class="row align-items-center min-vh-100">
+        <div class="col-lg-6">
+          <h1 class="display-4 fw-bold mb-4">Hi, I'm John Doe</h1>
+          <h2 class="h3 mb-4">Full Stack Developer</h2>
+          <p class="lead mb-4">Passionate about creating elegant solutions to complex problems through clean and efficient code.</p>
+          <div class="social-links mb-4">
+            <a href="#" class="me-3"><i class="fab fa-github"></i></a>
+            <a href="#" class="me-3"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+          </div>
+          <a href="#contact" class="btn btn-primary btn-lg">Get in Touch</a>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Profile" class="profile-img">
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section class="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Python, C++, JavaScript</li>
-      <li>Machine Learning, Deep Learning</li>
-      <li>Cybersecurity & Ethical Hacking</li>
-      <li>Web Development (HTML, CSS, React)</li>
-      <li>Docker, Firebase, Flask</li>
-    </ul>
+  <!-- About Section -->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="row">
+        <div class="col-lg-6">
+          <p class="lead">I'm a Full Stack Developer with 5 years of experience in building web applications. I specialize in JavaScript, React, Node.js, and Python.</p>
+          <p>My journey in software development started during my college years, and since then, I've been passionate about creating efficient and user-friendly applications. I believe in continuous learning and staying updated with the latest technologies.</p>
+          <div class="row mt-4">
+            <div class="col-md-6">
+              <ul class="list-unstyled">
+                <li><strong>Name:</strong> John Doe</li>
+                <li><strong>Email:</strong> john@example.com</li>
+                <li><strong>Phone:</strong> +1 234 567 890</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-unstyled">
+                <li><strong>Location:</strong> New York, USA</li>
+                <li><strong>Freelance:</strong> Available</li>
+                <li><strong>Experience:</strong> 5 Years</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="row g-4">
+            <div class="col-6">
+              <div class="achievement-card">
+                <i class="fas fa-code"></i>
+                <h3>50+</h3>
+                <p>Projects Completed</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="achievement-card">
+                <i class="fas fa-users"></i>
+                <h3>30+</h3>
+                <p>Happy Clients</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="achievement-card">
+                <i class="fas fa-award"></i>
+                <h3>10+</h3>
+                <p>Awards Won</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="achievement-card">
+                <i class="fas fa-coffee"></i>
+                <h3>1000+</h3>
+                <p>Cups of Coffee</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section class="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Term Sheet Validator:</strong> AI-powered contract validation using NLP and ML.</li>
-      <li><strong>DineVibe:</strong> Restaurant recommendation dashboard with Docker-based deployment.</li>
-      <li><strong>Fake News Detector:</strong> NLP-based system to identify misinformation.</li>
-    </ul>
+  <!-- Skills Section -->
+  <section id="skills" class="section-padding bg-light">
+    <div class="container">
+      <h2 class="section-title">My Skills</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="skill-card">
+            <div class="skill-info">
+              <h3>Frontend Development</h3>
+              <div class="skill-items">
+                <div class="skill-item">
+                  <span>HTML/CSS</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 95%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span>JavaScript</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 90%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span>React</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 85%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="skill-card">
+            <div class="skill-info">
+              <h3>Backend Development</h3>
+              <div class="skill-items">
+                <div class="skill-item">
+                  <span>Node.js</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 88%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span>Python</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 85%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span>SQL</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 80%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section class="education">
-    <h2>Education</h2>
-    <p><strong>Bachelor of Engineering in Computer Science</strong><br> XYZ University, 2025</p>
+  <!-- Projects Section -->
+  <section id="projects" class="section-padding">
+    <div class="container">
+      <h2 class="section-title">My Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Project 1">
+            <div class="project-info">
+              <h3>E-Commerce Platform</h3>
+              <p>A full-featured e-commerce platform built with React and Node.js</p>
+              <div class="project-tags">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>MongoDB</span>
+              </div>
+              <a href="#" class="btn btn-outline-primary mt-3">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Project 2">
+            <div class="project-info">
+              <h3>Task Management App</h3>
+              <p>A collaborative task management application with real-time updates</p>
+              <div class="project-tags">
+                <span>Vue.js</span>
+                <span>Firebase</span>
+                <span>Tailwind CSS</span>
+              </div>
+              <a href="#" class="btn btn-outline-primary mt-3">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Project 3">
+            <div class="project-info">
+              <h3>Social Media Dashboard</h3>
+              <p>Analytics dashboard for social media management</p>
+              <div class="project-tags">
+                <span>React</span>
+                <span>D3.js</span>
+                <span>Express</span>
+              </div>
+              <a href="#" class="btn btn-outline-primary mt-3">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section class="contact">
-    <h2>Contact</h2>
-    <p>Email: swikar@example.com</p>
-    <p>LinkedIn: linkedin.com/in/swikarjadhav</p>
-    <p>GitHub: github.com/swikarjadhav04</p>
+  <!-- Education Section -->
+  <section id="education" class="section-padding bg-light">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>Master of Computer Science</h3>
+            <h4>Stanford University</h4>
+            <p class="text-muted">2018 - 2020</p>
+            <p>Specialized in Artificial Intelligence and Machine Learning. Graduated with honors.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>Bachelor of Technology</h3>
+            <h4>Massachusetts Institute of Technology</h4>
+            <p class="text-muted">2014 - 2018</p>
+            <p>Computer Science and Engineering. Participated in various hackathons and coding competitions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Swikar Jadhav. All rights reserved.</p>
+  <!-- Contact Section -->
+  <section id="contact" class="section-padding">
+    <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h3>Location</h3>
+                <p>New York, NY 10001, USA</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h3>Email</h3>
+                <p>john@example.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h3>Phone</h3>
+                <p>+1 234 567 890</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <form class="contact-form">
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Your Email" required>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Subject" required>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p>&copy; 2024 John Doe. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <div class="social-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

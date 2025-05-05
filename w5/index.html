@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>E-Commerce Product Listing</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEase - Product Listing</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
   <style>
     .product-card img {
       height: 200px;
@@ -14,117 +16,360 @@
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand" href="#">ShopSmart</a>
-    </div>
-  </nav>
-
-  <!-- Filter Dropdown -->
-  <div class="container mb-4">
-    <div class="d-flex justify-content-between align-items-center">
-      <h3>Products</h3>
-      <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-          Filter by Category
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item filter-btn" data-filter="all" href="#">All</a></li>
-          <li><a class="dropdown-item filter-btn" data-filter="electronics" href="#">Electronics</a></li>
-          <li><a class="dropdown-item filter-btn" data-filter="clothing" href="#">Clothing</a></li>
-          <li><a class="dropdown-item filter-btn" data-filter="books" href="#">Books</a></li>
-          <li><a class="dropdown-item filter-btn" data-filter="home" href="#">Home Appliances</a></li>
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-shopping-bag me-2"></i>
+        ShopEase
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#"><i class="fas fa-home me-1"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-heart me-1"></i> Wishlist</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-shopping-cart me-1"></i> Cart</a>
+          </li>
         </ul>
       </div>
     </div>
-  </div>
+  </nav>
 
-  <!-- Product Grid -->
-  <div class="container">
-    <div class="row g-4" id="product-grid">
+  <!-- Main Content -->
+  <div class="container mt-5 pt-4">
+    <!-- Filters Section -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="filters-section p-3 bg-white rounded shadow-sm">
+          <div class="row align-items-center">
+            <div class="col-md-4 mb-3 mb-md-0">
+              <div class="dropdown">
+                <button class="btn btn-outline-primary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown">
+                  <i class="fas fa-filter me-2"></i>Category
+                </button>
+                <ul class="dropdown-menu w-100">
+                  <li><a class="dropdown-item" href="#" data-category="all">All Categories</a></li>
+                  <li><a class="dropdown-item" href="#" data-category="electronics">Electronics</a></li>
+                  <li><a class="dropdown-item" href="#" data-category="clothing">Clothing</a></li>
+                  <li><a class="dropdown-item" href="#" data-category="books">Books</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+              <div class="dropdown">
+                <button class="btn btn-outline-primary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown">
+                  <i class="fas fa-sort me-2"></i>Sort By
+                </button>
+                <ul class="dropdown-menu w-100">
+                  <li><a class="dropdown-item" href="#" data-sort="price-low">Price: Low to High</a></li>
+                  <li><a class="dropdown-item" href="#" data-sort="price-high">Price: High to Low</a></li>
+                  <li><a class="dropdown-item" href="#" data-sort="rating">Rating</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search products...">
+                <button class="btn btn-primary">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="row g-4">
       <!-- Product Card 1 -->
-      <div class="col-sm-6 col-md-4 col-lg-3 product-item" data-category="electronics">
-        <div class="card product-card">
-          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Smartphone">
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card product-card h-100">
+          <div class="badge bg-danger position-absolute top-0 end-0 m-2">Sale</div>
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Headphones">
           <div class="card-body">
-            <h5 class="card-title">Smartphone</h5>
-            <p class="card-text">Latest Android smartphone with stunning display.</p>
-            <p class="text-success fw-bold">₹14,999</p>
-            <a href="#" class="btn btn-outline-primary w-100">Buy Now</a>
+            <div class="category text-muted small mb-1">Electronics</div>
+            <h5 class="card-title">Wireless Headphones</h5>
+            <div class="rating mb-2">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star-half-alt text-warning"></i>
+              <span class="ms-1 text-muted">(4.5)</span>
+            </div>
+            <p class="card-text text-muted">Premium wireless headphones with noise cancellation</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="price">
+                <span class="text-decoration-line-through text-muted">₹4,999</span>
+                <span class="text-danger fw-bold">₹3,999</span>
+              </div>
+              <button class="btn btn-primary btn-sm">
+                <i class="fas fa-cart-plus"></i> Add
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- Product Card 2 -->
-      <div class="col-sm-6 col-md-4 col-lg-3 product-item" data-category="clothing">
-        <div class="card product-card">
-          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="T-shirt">
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card product-card h-100">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Smart Watch">
           <div class="card-body">
-            <h5 class="card-title">Men's T-shirt</h5>
-            <p class="card-text">Comfortable cotton t-shirt in multiple colors.</p>
-            <p class="text-success fw-bold">₹499</p>
-            <a href="#" class="btn btn-outline-primary w-100">Buy Now</a>
+            <div class="category text-muted small mb-1">Electronics</div>
+            <h5 class="card-title">Smart Watch</h5>
+            <div class="rating mb-2">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="far fa-star text-warning"></i>
+              <span class="ms-1 text-muted">(4.0)</span>
+            </div>
+            <p class="card-text text-muted">Fitness tracker with heart rate monitor</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="price">
+                <span class="fw-bold">₹2,499</span>
+              </div>
+              <button class="btn btn-primary btn-sm">
+                <i class="fas fa-cart-plus"></i> Add
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- Product Card 3 -->
-      <div class="col-sm-6 col-md-4 col-lg-3 product-item" data-category="books">
-        <div class="card product-card">
-          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Book">
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card product-card h-100">
+          <div class="badge bg-success position-absolute top-0 end-0 m-2">New</div>
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Running Shoes">
           <div class="card-body">
-            <h5 class="card-title">The Psychology of Money</h5>
-            <p class="card-text">Best-selling book on financial habits and decisions.</p>
-            <p class="text-success fw-bold">₹399</p>
-            <a href="#" class="btn btn-outline-primary w-100">Buy Now</a>
+            <div class="category text-muted small mb-1">Clothing</div>
+            <h5 class="card-title">Running Shoes</h5>
+            <div class="rating mb-2">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <span class="ms-1 text-muted">(5.0)</span>
+            </div>
+            <p class="card-text text-muted">Lightweight running shoes with cushioned soles</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="price">
+                <span class="fw-bold">₹3,999</span>
+              </div>
+              <button class="btn btn-primary btn-sm">
+                <i class="fas fa-cart-plus"></i> Add
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- Product Card 4 -->
-      <div class="col-sm-6 col-md-4 col-lg-3 product-item" data-category="home">
-        <div class="card product-card">
-          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Microwave Oven">
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card product-card h-100">
+          <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Book">
           <div class="card-body">
-            <h5 class="card-title">Microwave Oven</h5>
-            <p class="card-text">1000W microwave oven with smart presets.</p>
-            <p class="text-success fw-bold">₹7,499</p>
-            <a href="#" class="btn btn-outline-primary w-100">Buy Now</a>
+            <div class="category text-muted small mb-1">Books</div>
+            <h5 class="card-title">The Art of Programming</h5>
+            <div class="rating mb-2">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star-half-alt text-warning"></i>
+              <span class="ms-1 text-muted">(4.7)</span>
+            </div>
+            <p class="card-text text-muted">Comprehensive guide to modern programming</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="price">
+                <span class="fw-bold">₹899</span>
+              </div>
+              <button class="btn btn-primary btn-sm">
+                <i class="fas fa-cart-plus"></i> Add
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Add more cards with different categories -->
+      <!-- Product Card 5 -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card product-card h-100">
+          <div class="badge bg-danger position-absolute top-0 end-0 m-2">Sale</div>
+          <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="T-Shirt">
+          <div class="card-body">
+            <div class="category text-muted small mb-1">Clothing</div>
+            <h5 class="card-title">Casual T-Shirt</h5>
+            <div class="rating mb-2">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="far fa-star text-warning"></i>
+              <span class="ms-1 text-muted">(4.0)</span>
+            </div>
+            <p class="card-text text-muted">Comfortable cotton t-shirt for everyday wear</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="price">
+                <span class="text-decoration-line-through text-muted">₹999</span>
+                <span class="text-danger fw-bold">₹699</span>
+              </div>
+              <button class="btn btn-primary btn-sm">
+                <i class="fas fa-cart-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 6 -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card product-card h-100">
+          <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Smartphone">
+          <div class="card-body">
+            <div class="category text-muted small mb-1">Electronics</div>
+            <h5 class="card-title">Smartphone</h5>
+            <div class="rating mb-2">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star-half-alt text-warning"></i>
+              <span class="ms-1 text-muted">(4.6)</span>
+            </div>
+            <p class="card-text text-muted">Latest smartphone with advanced camera</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="price">
+                <span class="fw-bold">₹24,999</span>
+              </div>
+              <button class="btn btn-primary btn-sm">
+                <i class="fas fa-cart-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 7 -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card product-card h-100">
+          <div class="badge bg-success position-absolute top-0 end-0 m-2">New</div>
+          <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Laptop">
+          <div class="card-body">
+            <div class="category text-muted small mb-1">Electronics</div>
+            <h5 class="card-title">Ultrabook Laptop</h5>
+            <div class="rating mb-2">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <span class="ms-1 text-muted">(5.0)</span>
+            </div>
+            <p class="card-text text-muted">Thin and light laptop for professionals</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="price">
+                <span class="fw-bold">₹64,999</span>
+              </div>
+              <button class="btn btn-primary btn-sm">
+                <i class="fas fa-cart-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 8 -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="card product-card h-100">
+          <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Book">
+          <div class="card-body">
+            <div class="category text-muted small mb-1">Books</div>
+            <h5 class="card-title">Design Patterns</h5>
+            <div class="rating mb-2">
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="fas fa-star text-warning"></i>
+              <i class="far fa-star text-warning"></i>
+              <span class="ms-1 text-muted">(4.0)</span>
+            </div>
+            <p class="card-text text-muted">Essential guide to software design patterns</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="price">
+                <span class="fw-bold">₹1,299</span>
+              </div>
+              <button class="btn btn-primary btn-sm">
+                <i class="fas fa-cart-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- Pagination -->
+    <nav class="my-5">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1">Previous</a>
+        </li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
   </div>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white text-center mt-5 p-3">
-    &copy; 2025 ShopSmart. All rights reserved.
+  <footer class="bg-light py-4 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>About ShopEase</h5>
+          <p class="text-muted">Your one-stop destination for all your shopping needs. Quality products at affordable prices.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-muted">About Us</a></li>
+            <li><a href="#" class="text-muted">Contact</a></li>
+            <li><a href="#" class="text-muted">Shipping Policy</a></li>
+            <li><a href="#" class="text-muted">Return Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Connect With Us</h5>
+          <div class="social-links">
+            <a href="#" class="text-muted me-3"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-muted me-3"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-muted me-3"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-muted"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="text-center">
+        <p class="mb-0">&copy; 2024 ShopEase. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
 
-  <!-- Bootstrap JS Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Filtering Script -->
-  <script>
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const products = document.querySelectorAll('.product-item');
-
-    filterButtons.forEach(button => {
-      button.addEventListener('click', (e) => {
-        e.preventDefault();
-        const category = button.getAttribute('data-filter');
-
-        products.forEach(product => {
-          if (category === 'all' || product.getAttribute('data-category') === category) {
-            product.style.display = 'block';
-          } else {
-            product.style.display = 'none';
-          }
-        });
-      });
-    });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

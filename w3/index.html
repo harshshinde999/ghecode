@@ -1,87 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ABC Delights - Restaurant Menu</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Delights - Restaurant Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>ABC Delights</h1>
-    <p>Restaurant Menu</p>
-  </header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-utensils me-2"></i>
+                ABC Delights
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#top-dishes">Top Dishes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cuisines">Cuisines</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <section class="intro">
-    <h2>Welcome to ABC Delights</h2>
-    <p>At ABC Delights, we serve joy on every plate. Our expert chef ensures each dish is a perfect blend of taste and tradition. Quality ingredients, hygienic preparation, and a touch of love define our food experience.</p>
-    <blockquote>"Cooking is an art, and every guest is our canvas." – Chef Rajveer</blockquote>
-  </section>
+    <!-- Hero Section -->
+    <header id="home" class="hero-section">
+        <div class="container">
+            <h1>ABC Delights</h1>
+            <p class="lead">Experience the finest culinary journey</p>
+        </div>
+    </header>
 
-  <section class="popular-dishes">
-    <h2>Top Dishes</h2>
-    <ol>
-      <li>Paneer Tikka</li>
-      <li>Biryani</li>
-      <li>Butter Chicken</li>
-    </ol>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2>Welcome to ABC Delights</h2>
+                    <p class="lead">Where passion meets flavor</p>
+                    <p>At ABC Delights, we believe in creating memorable dining experiences through exceptional food and service. Our commitment to quality and authenticity has made us a favorite destination for food lovers.</p>
+                    <div class="chef-message mt-4">
+                        <div class="chef-image">
+                            <img src="https://images.unsplash.com/photo-1581349485608-9469926a8e5e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Chef" class="rounded-circle">
+                        </div>
+                        <div class="chef-quote">
+                            <blockquote>
+                                "Our passion for authentic flavors and innovative cooking techniques brings you the best of global cuisines."
+                            </blockquote>
+                            <cite>- Chef Michael Anderson</cite>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Restaurant Interior" class="img-fluid rounded shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section class="cuisines">
-    <h2>Available Cuisines</h2>
-    <ul>
-      <li>Italian</li>
-      <li>Indian</li>
-      <li>Chinese</li>
-    </ul>
-  </section>
+    <!-- Top Dishes Section -->
+    <section id="top-dishes" class="top-dishes py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Signature Dishes</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="dish-card">
+                        <div class="rank">1</div>
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Paneer Tikka" class="img-fluid">
+                        <div class="dish-info">
+                            <h3>Paneer Tikka</h3>
+                            <p>Grilled cottage cheese marinated in aromatic spices</p>
+                            <span class="price">₹350</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="dish-card">
+                        <div class="rank">2</div>
+                        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Biryani" class="img-fluid">
+                        <div class="dish-info">
+                            <h3>Hyderabadi Biryani</h3>
+                            <p>Fragrant basmati rice cooked with tender meat and spices</p>
+                            <span class="price">₹450</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="dish-card">
+                        <div class="rank">3</div>
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Butter Chicken" class="img-fluid">
+                        <div class="dish-info">
+                            <h3>Butter Chicken</h3>
+                            <p>Tender chicken in rich tomato and butter gravy</p>
+                            <span class="price">₹400</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section class="menu">
-    <h2>Menu</h2>
-    <div class="menu-item">
-      <img src="https://source.unsplash.com/300x200/?paneer" alt="Paneer Tikka" />
-      <div>
-        <h3>Paneer Tikka</h3>
-        <p>Grilled cottage cheese marinated in spicy Indian herbs.</p>
-        <span>₹280</span>
-      </div>
-    </div>
-    <div class="menu-item">
-      <img src="https://source.unsplash.com/300x200/?biryani" alt="Biryani" />
-      <div>
-        <h3>Hyderabadi Biryani</h3>
-        <p>Authentic biryani cooked with basmati rice and aromatic spices.</p>
-        <span>₹350</span>
-      </div>
-    </div>
-    <div class="menu-item">
-      <img src="https://source.unsplash.com/300x200/?butter-chicken" alt="Butter Chicken" />
-      <div>
-        <h3>Butter Chicken</h3>
-        <p>Classic creamy tomato-based curry with tender chicken pieces.</p>
-        <span>₹320</span>
-      </div>
-    </div>
-    <div class="menu-item">
-      <img src="https://source.unsplash.com/300x200/?pasta" alt="Pasta" />
-      <div>
-        <h3>Italian Pasta</h3>
-        <p>Penne pasta tossed in creamy Alfredo sauce and herbs.</p>
-        <span>₹270</span>
-      </div>
-    </div>
-    <div class="menu-item">
-      <img src="https://source.unsplash.com/300x200/?noodles" alt="Noodles" />
-      <div>
-        <h3>Hakka Noodles</h3>
-        <p>Stir-fried noodles with vegetables and Chinese sauces.</p>
-        <span>₹240</span>
-      </div>
-    </div>
-  </section>
+    <!-- Cuisines Section -->
+    <section id="cuisines" class="cuisines py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Cuisines</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="cuisine-card">
+                        <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Italian Cuisine" class="img-fluid">
+                        <div class="cuisine-info">
+                            <h3>Italian</h3>
+                            <p>Authentic pasta, pizza, and Mediterranean flavors</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="cuisine-card">
+                        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Indian Cuisine" class="img-fluid">
+                        <div class="cuisine-info">
+                            <h3>Indian</h3>
+                            <p>Rich spices and traditional cooking methods</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="cuisine-card">
+                        <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Chinese Cuisine" class="img-fluid">
+                        <div class="cuisine-info">
+                            <h3>Chinese</h3>
+                            <p>Wok-tossed delicacies and authentic flavors</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 ABC Delights. All Rights Reserved.</p>
-  </footer>
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Menu</h2>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Dish Name</th>
+                            <th>Description</th>
+                            <th>Price (INR ₹)</th>
+                            <th>Image</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Paneer Tikka</td>
+                            <td>Grilled cottage cheese marinated in aromatic spices</td>
+                            <td>₹350</td>
+                            <td><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Paneer Tikka" class="menu-img"></td>
+                        </tr>
+                        <tr>
+                            <td>Hyderabadi Biryani</td>
+                            <td>Fragrant basmati rice cooked with tender meat and spices</td>
+                            <td>₹450</td>
+                            <td><img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Biryani" class="menu-img"></td>
+                        </tr>
+                        <tr>
+                            <td>Butter Chicken</td>
+                            <td>Tender chicken in rich tomato and butter gravy</td>
+                            <td>₹400</td>
+                            <td><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Butter Chicken" class="menu-img"></td>
+                        </tr>
+                        <tr>
+                            <td>Margherita Pizza</td>
+                            <td>Classic pizza with tomato sauce and mozzarella</td>
+                            <td>₹350</td>
+                            <td><img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Pizza" class="menu-img"></td>
+                        </tr>
+                        <tr>
+                            <td>Kung Pao Chicken</td>
+                            <td>Spicy diced chicken with peanuts and vegetables</td>
+                            <td>₹380</td>
+                            <td><img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Kung Pao Chicken" class="menu-img"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>
+                        123 Food Street, Cuisine City<br>
+                        Phone: +91 1234567890<br>
+                        Email: info@abcdelights.com
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Opening Hours</h5>
+                    <p>
+                        Monday - Friday: 11:00 AM - 11:00 PM<br>
+                        Saturday - Sunday: 10:00 AM - 12:00 AM
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <h5>Follow Us</h5>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2024 ABC Delights. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
