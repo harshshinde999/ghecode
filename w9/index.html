@@ -3,29 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <title>Weather Application</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <div class="weather-app">
-            <h1>Weather App</h1>
-            
-            <div class="search-box">
-                <input 
-                    type="text" 
-                    id="cityInput" 
-                    placeholder="Enter city name..."
-                >
-                <button id="searchBtn">Search</button>
-            </div>
-
-            <div class="weather-info" id="weatherInfo">
-                <!-- Weather information will be displayed here -->
-            </div>
+        <h1>Weather Forecast</h1>
+        <div class="search-container">
+            <input type="text" id="cityInput" placeholder="Enter city name">
+            <button onclick="getWeather()">Search</button>
+        </div>
+        <div id="weatherInfo" class="weather-info">
+            <!-- Weather information will be displayed here -->
         </div>
     </div>
-    <script src="weather-data.js"></script>
     <script src="script.js"></script>
 </body>
 </html> 

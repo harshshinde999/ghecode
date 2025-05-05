@@ -2,12 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f0f2f5;
+    background: linear-gradient(135deg, #00b4db, #0083b0);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -15,103 +14,82 @@ body {
 }
 
 .container {
-    width: 100%;
-    max-width: 600px;
-    padding: 20px;
-}
-
-.weather-app {
-    background-color: white;
+    background: rgba(255, 255, 255, 0.9);
     padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
 }
 
 h1 {
     text-align: center;
-    color: #1a73e8;
+    color: #333;
     margin-bottom: 1.5rem;
 }
 
-.search-box {
+.search-container {
     display: flex;
-    gap: 1rem;
+    gap: 10px;
     margin-bottom: 1.5rem;
 }
 
-input[type="text"] {
+input {
     flex: 1;
-    padding: 0.75rem;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     font-size: 1rem;
-    transition: border-color 0.3s;
-}
-
-input[type="text"]:focus {
-    outline: none;
-    border-color: #1a73e8;
 }
 
 button {
-    padding: 0.75rem 1.5rem;
-    background-color: #1a73e8;
+    padding: 10px 20px;
+    background-color: #0083b0;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem;
     transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #1557b0;
+    background-color: #006688;
+}
+
+.weather-info {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #f8f9fa;
 }
 
 .weather-card {
-    background-color: #f8f9fa;
-    padding: 1.5rem;
-    border-radius: 8px;
     margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .weather-card h2 {
-    color: #1a73e8;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
 }
 
 .weather-details {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
-.detail {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem;
-    background-color: white;
-    border-radius: 6px;
-}
-
-.label {
+.weather-details p {
     color: #666;
-    font-weight: 500;
-}
-
-.value {
-    color: #1a73e8;
-    font-weight: 600;
+    font-size: 0.9rem;
 }
 
 .error-message {
-    background-color: #fee2e2;
-    color: #dc2626;
-    padding: 1rem;
-    border-radius: 8px;
-    text-align: center;
+    color: #dc3545;
     margin-top: 1rem;
+    text-align: center;
 } 
